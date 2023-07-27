@@ -9,7 +9,7 @@ const router = Router();
 
 router.get('/', HomeController.home);
 
-router.get('/novo', newUserController.cliente);
+router.post('/novo', newUserController.cliente);
 router.get('/:id/delete', UserController.DeleteUser);
 router.get('/:id/add', UserController.AumentarIdade);
 router.get('/:id/remove', UserController.DiminuirIdade);
