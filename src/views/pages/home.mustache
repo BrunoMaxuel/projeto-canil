@@ -1,0 +1,27 @@
+{{>partials/header}}
+
+<hr/>
+
+<fieldset>
+    <legend>Novo Usuário</legend>
+    <form method="POST" action="/novo">
+        <input type="text" name="name" placeholder="Digite um nome" /><br/><br/>
+        <input type="text" name="age" placeholder="Digite uma idade" /><br/><br/>
+        <input type="submit" value="Inserir Usuário" />
+    </form>
+</fieldset>
+
+<h2>Usuários do banco</h2>
+<ul>
+    {{#users}}
+        <li>{{name}} - Idade: {{age}} --
+         <a href="/{{id}}/add">Mais</a> ---- 
+         <a href="/{{id}}/remove">Menos</a> ----
+         <a href="/{{id}}/delete">DELETAR</a>
+         </li>
+    {{/users}}
+</ul>
+
+<hr/>
+
+{{>partials/footer}}
