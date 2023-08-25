@@ -7,6 +7,9 @@ router.get('/', pageController.home);
 router.get('/dogs', pageController.dogs);
 router.get('/cats', pageController.cats);
 router.get('/fishes', pageController.fishes);
+router.get('/login', pageController.login);
+router.get('/cadastrar', pageController.cadastrar);
+router.post('/cadastrar', pageController.cadastrarAdd);
 router.get('/search', searchController.search);
 
 export default router;
